@@ -1,0 +1,55 @@
+---
+title: Urban
+---
+
+<section class="hero diagonal">
+    <hr class="line">
+	<div class="container halves">
+        <img src="{{ site.baseurl }}/images/icon1.png" width="300">
+        <div class="editable">
+            <h2 class="editable">Web Resume</h2>
+            <p class="subtext editable">I am an <strong>allround</strong> web developer with knowledge in front-end development.</p>
+		</div>
+	</div>
+</section>
+
+<section class="diagonal patterned">
+	<div class="container halves">
+		<div>
+			<h3 class="editable">Some of my work.</h3>
+			<p class="editable">I take my pride my work, you can have look here.</p>
+			<p class="editable"><a href="{{ site.baseurl }}/portfolio/">View Full Portfolio &rarr;</a></p>
+		</div>
+		<div>
+			<ul class="image-grid">
+				{% for client in site.clients limit: 2 %}
+					<li><a href="{{ site.baseurl }}{{ client.url }}"><img src="{% include relative-src.html src=client.image_path %}"></a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="diagonal alternate">
+	<div class="container halves">
+		<div>
+			<ul class="image-list">
+				<li><img src="{{ site.baseurl }}/images/computer.png" width="300"></li>
+			</ul>
+		</div>
+		<div>
+			<h3 class="editable">My skills</h3>
+			<p class="editable">
+            <ul class="skills">
+                <li>HTML + HTML5</li>
+                <li>CSS + CSS3</li>
+                <li>PHP</li>
+                <li>React</li>
+                <li>MySQL</li>
+                <li>C#</li>
+                <li>...and more</li>
+            </ul>
+		    <p><a class="button alt" href="{{ site.baseurl }}/contact/">Contact Me</a></p> 
+        </div>
+	</div>
+</section>
